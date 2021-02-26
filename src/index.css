@@ -11,9 +11,11 @@ a {
 }
 
 .app {
-  display:flex;
-  flex-direction: column;
   max-width:800px;
+  position: absolute;
+  top:50px;
+  left: 50%;
+  transform: translate(-50%,0%);
 }
 
 .header {
@@ -37,12 +39,6 @@ a {
   width: 500px;
 }
 
-.results {
-  display:flexbox;
-}
-
-
-
 .result {
   padding:10px;
   margin: 15px;
@@ -62,4 +58,13 @@ a {
 
 .result-extract {
   font-size:15px;
+}
+
+@media (max-width: 800px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    left:0%;
+    transform: translate(0%,0%);
+  }
 }
